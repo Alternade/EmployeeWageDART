@@ -8,9 +8,11 @@ int sal = 0;
 int workHr = 0;
 int totalWrkHr = 0;
 var DailyWage = new List.empty();
+var Days = new List.empty();
 
 factorial() {
   DailyWage[day] = workHr;
+  Days[day] = day;
   totalWrkHr = totalWrkHr + workHr;
   sal = wagePerHr * workHr;
   print("Salary = $sal");
@@ -47,4 +49,5 @@ void main() {
   }
   print("Total salary is $TotalSalary");
   print(DailyWage);
+  print(Days);
 }
