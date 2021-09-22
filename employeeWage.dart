@@ -7,8 +7,10 @@ int TotalSalary = 0;
 int sal = 0;
 int workHr = 0;
 int totalWrkHr = 0;
+var DailyWage = new List.empty();
 
 factorial() {
+  DailyWage[day] = workHr;
   totalWrkHr = totalWrkHr + workHr;
   sal = wagePerHr * workHr;
   print("Salary = $sal");
@@ -44,4 +46,5 @@ void main() {
     factorial();
   }
   print("Total salary is $TotalSalary");
+  print(DailyWage);
 }
