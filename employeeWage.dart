@@ -8,6 +8,7 @@ void main() {
   int sal = 0;
   int workHr = 0;
   int totalWrkHr = 0;
+
   while (day < 20 && totalWrkHr < 100) {
     int randomNumber = rng.nextInt(3);
     switch (randomNumber) {
