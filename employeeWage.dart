@@ -1,14 +1,22 @@
 import 'dart:math';
 
-void main() {
-  int wagePerHr = 20;
-  Random rng = new Random();
-  int day = 0;
-  int TotalSalary = 0;
-  int sal = 0;
-  int workHr = 0;
-  int totalWrkHr = 0;
+int wagePerHr = 20;
+Random rng = new Random();
+int day = 0;
+int TotalSalary = 0;
+int sal = 0;
+int workHr = 0;
+int totalWrkHr = 0;
 
+factorial() {
+  totalWrkHr = totalWrkHr + workHr;
+  sal = wagePerHr * workHr;
+  print("Salary = $sal");
+  TotalSalary = TotalSalary + sal;
+  day++;
+}
+
+void main() {
   while (day < 20 && totalWrkHr < 100) {
     int randomNumber = rng.nextInt(3);
     switch (randomNumber) {
@@ -33,11 +41,7 @@ void main() {
         }
         break;
     }
-    totalWrkHr = totalWrkHr + workHr;
-    sal = wagePerHr * workHr;
-    print("Salary = $sal");
-    TotalSalary = TotalSalary + sal;
-    day++;
+    factorial();
   }
   print("Total salary is $TotalSalary");
 }
