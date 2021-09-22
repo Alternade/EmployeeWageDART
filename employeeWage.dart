@@ -3,34 +3,40 @@ import 'dart:math';
 void main() {
   int wagePerHr = 20;
   Random rng = new Random();
-  int randomNumber = rng.nextInt(3);
+  int day = 0;
+  int TotalSalary = 0;
+  int sal = 0;
   int workHr = 0;
-  switch (randomNumber) {
-    case 1:
-      {
-        print("Employee is Present");
-        int workHr = 8;
-        int sal = wagePerHr * workHr;
-        print("Salary = $sal");
-      }
-      break;
+  int totalWrkHr = 0;
+  while (day < 20 && totalWrkHr < 100) {
+    int randomNumber = rng.nextInt(3);
+    switch (randomNumber) {
+      case 1:
+        {
+          print("Employee is Present");
+          workHr = 8;
+        }
+        break;
 
-    case 2:
-      {
-        print("Employee is part time");
-        int workHr = 4;
-        int sal = wagePerHr * workHr;
-        print("Salary = $sal");
-      }
-      break;
+      case 2:
+        {
+          print("Employee is part time");
+          workHr = 4;
+        }
+        break;
 
-    default:
-      {
-        print("Employee is absent");
-        int workHr = 0;
-        int sal = wagePerHr * workHr;
-        print("Salary = $sal");
-      }
-      break;
+      default:
+        {
+          print("Employee is absent");
+          workHr = 0;
+        }
+        break;
+    }
+    totalWrkHr = totalWrkHr + workHr;
+    sal = wagePerHr * workHr;
+    print("Salary = $sal");
+    TotalSalary = TotalSalary + sal;
+    day++;
   }
+  print("Total salary is $TotalSalary");
 }
